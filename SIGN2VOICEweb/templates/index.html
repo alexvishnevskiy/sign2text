@@ -7,11 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>WebCamera</title>
+
 </head>
 <body>
     <div>
-        <img src="{% url 'live_camera' %}">
+        <
+        <img id="videoFrame" src="{% url 'live_camera' %}">
     </div>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <h2 class="index">HAHAHAHA</h2>
+
 
 </body>
 </html>

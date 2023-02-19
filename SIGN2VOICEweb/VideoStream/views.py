@@ -13,5 +13,4 @@ def livefe(request):
     except: # needs a fix
         pass
 
-def index(request, *args, **kwargs):
-    return render(request, 'index.html')
+
