@@ -14,8 +14,8 @@
 <body>
     <div class="main-content">
         <div class="topnav">
-            <a href="#about"><h1>About</h1></a>
-            <a href="#main"><h1>Main</h1></a>
+            <a href="{% url 'about' %}"><h1>About</h1></a>
+            <a href="{% url 'home' %}"><h1>Main</h1></a>
         </div>
 
         <h1 id="videoFrame-centered-text">Press to begin</h1>
@@ -31,6 +31,7 @@
 
 
         <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css/global.css' %}">
     </div>
 
 </body>
