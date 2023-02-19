@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,22 +8,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>WebCamera</title>
+    <script src="{% static 'js/index.js' %}"></script>
 
 </head>
 <body>
-    <div id="videoFrame-centered-container">
-        <h1 id="videoFrame-centered-text">Press to begin</h1>
-        <div id="videoFrame-blur-container" class="blurred" onclick="this.classList.remove('blurred')">
-            <div id="overlay">
-            <img id="videoFrame" src="{% url 'live_camera' %}" onclick="this.classList.remove('blur')" alt="">
-            </div>
-            <div id="videoFrame-bottom-text"><h2>  This is the bottom text</h2></div>
+    <div class="main-content">
+        <div class="topnav">
+            <a href="{% url 'about' %}"><h1>About</h1></a>
+            <a href="{% url 'home' %}"><h1>Main</h1></a>
         </div>
+
+        <h1 id="videoFrame-centered-text">Press to begin</h1>
+
+        <div id="videoFrame-centered-container">
+            <div id="videoFrame-blur-container" class="blurred" onclick="this.classList.remove('blurred');document.getElementById('videoFrame-centered-text').style.opacity = 0">
+                <div id="overlay">
+                <img id="videoFrame" src="{% url 'live_camera' %}" onclick="this.classList.remove('blur')" alt="">
+                </div>
+                <div id="videoFrame-bottom-text"><h2>  This is the bottom text</h2></div>
+            </div>
+        </div>
+
+
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css/global.css' %}">
     </div>
-
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-
 
 </body>
 </html>

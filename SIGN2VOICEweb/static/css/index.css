@@ -1,0 +1,70 @@
+#videoFrame-centered-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+
+}
+
+#videoFrame-centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: black;
+  z-index: 2000000;
+  cursor: pointer;
+
+
+}
+
+#videoFrame-centered-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.blurred {
+  filter: blur(20px);
+}
+
+#overlay {
+  position: relative;
+}
+
+#overlay img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+#videoFrame-blur-container {
+  position: relative;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  cursor: pointer
+}
+
+#videoFrame-bottom-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 10em;
+  color: white;
+  transform: translateX(-50%);
+  z-index: 200;
+}
+
+.main-content {
+  position: center;
+  border-radius: 10px;
+}
