@@ -10,14 +10,18 @@
 
 </head>
 <body>
-    <div>
-        <
-        <img id="videoFrame" src="{% url 'live_camera' %}">
+    <div id="videoFrame-centered-container">
+        <h1 id="videoFrame-centered-text">Press to begin</h1>
+        <div id="videoFrame-blur-container" class="blurred" onclick="this.classList.remove('blurred')">
+            <div id="overlay">
+            <img id="videoFrame" src="{% url 'live_camera' %}" onclick="this.classList.remove('blur')" alt="">
+            </div>
+            <div id="videoFrame-bottom-text"><h2>  This is the bottom text</h2></div>
+        </div>
     </div>
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <h2 class="index">HAHAHAHA</h2>
 
 
 </body>
