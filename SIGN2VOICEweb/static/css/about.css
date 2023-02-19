@@ -16,7 +16,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    /*border: 1px solid green;*/
+    border: 1px solid green;
     justify-content: space-evenly;
     align-items:center;
     padding: 300px;
@@ -24,15 +24,15 @@
 }
 
 .header {
-    /*height: 30px;*/
+    height: 30px;
     width: min-content;
 
-    /*border: 1px solid red;*/
+    border: 1px solid red;
 }
 
 .content{
     margin-top: 60px;
-    /*border: 1px solid orange;*/
+    border: 1px solid orange;
 }
 
 #footer {
@@ -47,5 +47,12 @@ body {
 
 .subHeader {
     margin-top: -135px;
-    /*border: 1px solid red;*/
+    border: 1px solid red;
+}
+
+.content-description {
+    justify-content: space-evenly;
+    align-items:center;
+    display: flex;
+    flex-direction: column;
 }

@@ -1,0 +1,7 @@
+asgiref @ file:///home/conda/feedstock_root/build_artifacts/asgiref_1671589829431/work
+cvzone==1.5.6
+Django @ file:///home/conda/feedstock_root/build_artifacts/django_1676383122062/work
+numpy==1.24.2
+opencv-python==4.7.0.68
+sqlparse @ file:///home/conda/feedstock_root/build_artifacts/sqlparse_1663990453245/work
+typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1665144421445/work
