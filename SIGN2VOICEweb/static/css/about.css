@@ -1,0 +1,51 @@
+#icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#mainTitle {
+    font-size: 200px;
+}
+
+#sub-mainTitle-text {
+    font-size: 100px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid green;*/
+    justify-content: space-evenly;
+    align-items:center;
+    padding: 300px;
+    /*height: 80%;*/
+}
+
+.header {
+    /*height: 30px;*/
+    width: min-content;
+
+    /*border: 1px solid red;*/
+}
+
+.content{
+    margin-top: 60px;
+    /*border: 1px solid orange;*/
+}
+
+#footer {
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+}
+body {
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.subHeader {
+    margin-top: -135px;
+    /*border: 1px solid red;*/
+}

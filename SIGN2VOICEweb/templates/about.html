@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/global.css' %}">
+</head>
+<body>
+        <div class="topnav">
+            <a href="{% url 'about' %}"><h1>About</h1></a>
+            <a href="{% url 'home' %}"><h1>Main</h1></a>
+        </div>
+
+    <div class="container">
+
+        <div class="header">
+        <h1 id="mainTitle">SIGN2VOICE</h1>
+        </div>
+
+        <div class="subHeader">
+        <h1 id="subText">hello hello hello hello</h1>
+        </div>
+
+        <div class="content">
+            <img src="{% static "images/icon1.png" %}" alt="" width="110" height="100" style="display: inline-block;"  />
+            <img src="{% static "images/icon2.png" %}" alt="" width="150" height="150" style="display: inline-block;"  />
+            <img src="{% static "images/icon3.png" %}" alt="" width="150" height="150" style="display: inline-block;"  />
+            <img src="{% static "images/icon4.png" %}" alt="" width="150" height="150" style="display: inline-block;"  />
+        </div>
+
+
+    </div>
+
+            <div id="footer">
+            <h2 id="sub-mainTitle-text">HACK 4 HUMANITIES </h2>
+            </div>
+
+
+</body>
+
+
+</html>
