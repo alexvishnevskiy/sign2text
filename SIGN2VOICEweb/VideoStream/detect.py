@@ -7,13 +7,9 @@ from torchvision.transforms import (
     RandomRotation, RandomAutocontrast, RandomRotation
     )
 from PIL import Image
-from torchvision.models import resnet18, ResNet18_Weights
+from torchvision.models import resnet18
 import torch.nn as nn
 
-
-def load_model(model, path):
-    model.load_state_dict(torch.load(path))
-    return model
 
 def convert2letter(label):
     mapping = {0: 'A',
@@ -51,7 +47,6 @@ def get_model(path):
     model = resnet18()
     model.fc = nn.Linear(512, 29)
     model.load_state_dict(torch.load(path))
-    model.cuda()
     model.eval()
     return model
 
@@ -64,12 +59,10 @@ def get_aug():
     ])
     return valid_aug
 
-def detect(img_path, model_path):
-    img = cv2.imread(img_path)
-    detector = HandDetector(detectionCon=0.8, maxHands=1)
+def detect(img, model):
+    detector = HandDetector(detectionCon=0.7, maxHands=1)
     hands = detector.findHands(img, draw=False)
     aug = get_aug()
-    model = get_model(model_path)
     offset = 100
 
     if hands:
@@ -79,8 +72,8 @@ def detect(img_path, model_path):
         im = Image.fromarray(imgCrop)
 
         with torch.no_grad():
-            out = model(aug(im).unsqueeze(0).cuda())
-        label = torch.argmax(out).cpu().item()
+            out = model(aug(im).unsqueeze(0))
+        label = torch.argmax(out).item()
         return convert2letter(label)
     else:
         return ""
