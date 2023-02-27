@@ -35,3 +35,4 @@ Assuming that you have activated virtual environment in python3.7:
 
 - [x] Try to start mediapipe in Anaconda
 - - [ ] `Error: Process finished with exit code 132 (interrupted by signal 4: SIGILL)`
+- Possible solution: https://www.ai-buzz.com/18-steps-to-install-tensorflow_macos-on-m1-macbook-2020/
